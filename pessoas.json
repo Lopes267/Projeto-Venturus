@@ -10,7 +10,7 @@
     "nome": "tiago de souza",
     "email": "teste@gmail.com",
     "tipo": "medico",
-    "especialidade": "medicina",
-    "senha_hash": "pbkdf2:sha256:1000000$60hx1qslUdJrTuLq$fbbca98b51f2325bfa0b57d6a3a6482c8ca20bad817c63727e35bae681f386f4"
+    "especialidade": "dermatologista",
+    "senha_hash": "pbkdf2:sha256:1000000$iFuQuHlglQK4VHgG$11b67083e932675580614ff16d8d59fc9f4db3986b12f188b54a554ea99e959d"
   }
 ]
