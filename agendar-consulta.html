@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenko - Agende sua Consulta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand fs-3" href="index.html">Kenko</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item"><a class="nav-link fs-5" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="cadastro.html">Cadastre-se</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="sobre-nos.html">Sobre Nós</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="index.html">Home</a></li>
+                </ul>
+            </div>
+            <img id="user-profile-pic" class="rounded-circle" src="https://via.placeholder.com/50"
+                alt="Foto de perfil do usuário">
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h2 class="text-center mb-4 fw-bold">Agende sua Consulta Online</h2>
+        <p class="text-center text-muted mb-5">Encontre o especialista ideal para você e marque sua consulta em poucos passos.</p>
+
+        <section class="card p-4 mb-5 shadow-sm">
+            <h5 class="card-title fw-bold mb-3">Encontre um especialista</h5>
+            <form id="search-form">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="specialty" class="form-label">Especialidade</label>
+                        <select class="form-select" id="specialty" required>
+                            <option selected disabled value="">Selecione...</option>
+                            <option>Clínica Geral</option>
+                            <option>Pediatria</option>
+                            <option>Dermatologia</option>
+                            <option>Cardiologia</option>
+                            <option>Psicologia</option>
+                            </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="date" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section id="results-section" class="d-none">
+            <h4 class="fw-bold mb-3">Médicos Disponíveis</h4>
+            <div class="list-group">
+                <div class="list-group-item d-flex justify-content-between align-items-center mb-3 p-4 border rounded">
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Foto do Dr. Santos">
+                        <div>
+                            <h5 class="mb-1">Dr. Carlos Santos</h5>
+                            <p class="mb-1 text-muted">Clínica Geral</p>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="fw-bold me-2">Próximo horário:</span> 15:30h
+                        <button class="btn btn-success ms-3">Agendar</button>
+                    </div>
+                </div>
+
+                <div class="list-group-item d-flex justify-content-between align-items-center mb-3 p-4 border rounded">
+                    <div class="d-flex align-items-center">
+                        <img src="https://via.placeholder.com/80" class="rounded-circle me-3" alt="Foto da Dra. Costa">
+                        <div>
+                            <h5 class="mb-1">Dra. Juliana Costa</h5>
+                            <p class="mb-1 text-muted">Pediatria</p>
+                            <div class="text-warning">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="fw-bold me-2">Próximo horário:</span> 16:00h
+                        <button class="btn btn-success ms-3">Agendar</button>
+                    </div>
+                </div>
+
+                </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    
+    <script>
+        // Este script é apenas para simular a exibição dos resultados.
+        // Iremos substituí-lo por uma lógica real que busca dados do nosso backend.
+        document.getElementById('search-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('results-section').classList.remove('d-none');
+            // Aqui faremos uma chamada API para buscar os médicos com base nos filtros
+            // e construir a lista de resultados dinamicamente.
+        });
+    </script>
+</body>
+
+</html>

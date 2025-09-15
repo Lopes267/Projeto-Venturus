@@ -1,0 +1,283 @@
+/* assets/css/style.css */
+
+/* --- VARIÁVEIS DE CORES --- */
+:root {
+    --amarelo: #FFD700;
+    --azul-claro: #87CEEB;
+    --cinza-claro: #F5F5F5;
+    --cinza-escuro: #D3D3D3;
+    --preto: #000000;
+    --branco: #FFFFFF;
+    /* Adicionado para textos em fundos escuros */
+    --verde-sucesso: #28a745;
+    /* Para mensagens de sucesso */
+    --vermelho-erro: #dc3545;
+    /* Para mensagens de erro */
+}
+
+/* --- ESTILOS GERAIS --- */
+
+@font-face {
+    font-family: "poppins";
+    src: url(Poppins/Poppins-Medium.ttf);
+}
+
+* {
+    font-family: "poppins";
+}
+
+body {
+    background-color: var(--cinza-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fonte mais moderna */
+}
+
+/* --- ESTILO DO CABEÇALHO (HEADER) --- */
+header {
+    width: 100%;
+    height: 125px;
+    transition: height 0.45s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para destacar o cabeçalho */
+    z-index: 1000;
+    /* Garante que o cabeçalho fique acima de outros elementos */
+    position: sticky;
+    /* Fixa o cabeçalho no topo ao rolar */
+    top: 0;
+}
+
+header:hover {
+    height: 150px;
+    /* Pequeno aumento ao passar o mouse */
+}
+
+.navbar {
+    background-color: var(--amarelo) !important;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--preto) !important;
+    position: relative;
+    /* Essencial para posicionar a linha */
+    text-decoration: none;
+    /* Garante que não haja sublinhado padrão */
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    /* Conteúdo vazio é necessário para criar o elemento */
+    position: absolute;
+    bottom: -3px;
+    /* Posição da linha: 5px abaixo do link */
+    left: 0;
+    height: 3px;
+    /* Espessura da linha */
+    background-color: var(--preto);
+    /* Cor da linha */
+    width: 0;
+    /* Começa com largura zero (invisível) */
+    transition: width 0.4s ease-in-out;
+    /* Transição para a animação */
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    /* Aumenta a largura para 100% ao passar o mouse */
+}
+
+#user-profile-pic {
+    /* Usando o ID para ser mais específico */
+    background-color: var(--azul-claro) !important;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    /* Garante que a imagem preencha o círculo */
+    border: 2px solid var(--preto);
+    /* Borda para a foto de perfil */
+}
+
+/* --- ESTILO DO CONTEÚDO PRINCIPAL --- */
+main.container {
+    background-color: var(--azul-claro) !important;
+    padding: 3rem !important;
+    /* Mais padding para o conteúdo principal */
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.main-card {
+    background-color: var(--amarelo) !important;
+    padding: 2rem !important;
+    /* Mais padding dentro dos cards */
+    color: var(--preto);
+    /* Garante a cor do texto */
+}
+
+.menu-rapido ul li a {
+    color: var(--preto) !important;
+    transition: color 0.3s ease;
+}
+
+.menu-rapido ul li a:hover {
+    color: var(--branco) !important;
+}
+
+.atendimento-card {
+    background-color: var(--cinza-escuro) !important;
+    color: var(--preto);
+}
+
+.atendimento-circle {
+    background-color: var(--azul-claro) !important;
+}
+
+/* --- SEÇÃO DE DESTAQUE (HERO SECTION) --- */
+.hero-section {
+    background-color: var(--cinza-claro);
+    /* Fundo para a seção de destaque */
+    padding: 60px 0;
+    /* Espaçamento vertical */
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Separador visual */
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    color: var(--preto);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+/* --- SEÇÃO DE BENEFÍCIOS/DICAS --- */
+.benefits-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefit-item {
+    padding: 20px;
+    background-color: var(--branco);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    /* Garante que os cards tenham a mesma altura */
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-item .icon {
+    font-size: 3rem;
+    color: var(--azul-claro);
+    margin-bottom: 15px;
+}
+
+.benefit-item h4 {
+    color: var(--preto);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* --- ESTILOS DA PÁGINA DE CONTATO --- */
+.btn-primary {
+    background-color: var(--amarelo) !important;
+    border-color: var(--amarelo) !important;
+    color: var(--preto) !important;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--amarelo), 10%) !important;
+    /* Escurece um pouco ao passar o mouse */
+    border-color: darken(var(--amarelo), 10%) !important;
+}
+
+/* --- ESTILOS DA PÁGINA DE PACIENTES --- */
+.card-img-top {
+    width: 120px;
+    /* Tamanho fixo para as fotos de perfil */
+    height: 120px;
+    border-radius: 50%;
+    /* Transforma a imagem em círculo */
+    object-fit: cover;
+    /* Garante que a imagem preencha o círculo */
+    border: 3px solid var(--azul-claro);
+    /* Borda para as fotos dos pacientes */
+    margin-bottom: 15px;
+}
+
+.card {
+    border: none;
+    /* Remove a borda padrão do Bootstrap */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    background-color: var(--branco);
+}
+
+.card-title {
+    color: var(--preto);
+}
+
+.card-text {
+    color: #666;
+}
+
+.form-cadastro {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.nav-link {
+    margin-right: 30px;
+}
+
+.form-login {
+    width: 600px;
+    max-width: 900px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.logo{
+    width: 450px;
+    margin-left: 37.5%;
+}
+
+.logodiv{
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.indexbody{
+    background: linear-gradient(to bottom #FFFFFF, #dfdfdf);
+}
+
+.containermy-5{
+    margin-left: 21%;
+}
+
+.sn{
+    font-size: 17.5px;
+}

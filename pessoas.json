@@ -1,0 +1,16 @@
+[
+  {
+    "nome": "Enzo Lopes de Paula",
+    "email": "enzopaula05@gmail.com",
+    "tipo": "cliente",
+    "especialidade": null,
+    "senha_hash": "scrypt:32768:8:1$BfAamwkLHi1tUNn6$d4c6780eeddbeb8ec08d868ca10aa5d6435d9b13cdb36fb16a10950c4ca84529eb9797183d321ac3bd39b3eba0d2eb8db337d0b9cb646cd12972d25c1276059f"
+  },
+  {
+    "nome": "tiago de souza",
+    "email": "teste@gmail.com",
+    "tipo": "medico",
+    "especialidade": "medicina",
+    "senha_hash": "pbkdf2:sha256:1000000$60hx1qslUdJrTuLq$fbbca98b51f2325bfa0b57d6a3a6482c8ca20bad817c63727e35bae681f386f4"
+  }
+]
