@@ -22,3 +22,4 @@ egundo plano em modo de servidor pelo cmd, para conectar o banco de dados à out
 
 
 Link para o vídeo de apresentação da proposta da equipe
+https://youtu.be/uK6awKJu0uk
