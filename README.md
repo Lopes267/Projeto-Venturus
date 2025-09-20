@@ -19,3 +19,6 @@ Flask_cors
 werkzeug.security
 Em Servidor Local o o Python deve ser ativado em s
 egundo plano em modo de servidor pelo cmd, para conectar o banco de dados à outra parte do projeto
+
+
+Link para o vídeo de apresentação da proposta da equipe
