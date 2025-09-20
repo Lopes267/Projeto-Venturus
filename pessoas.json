@@ -12,5 +12,12 @@
     "tipo": "medico",
     "especialidade": "dermatologista",
     "senha_hash": "pbkdf2:sha256:1000000$iFuQuHlglQK4VHgG$11b67083e932675580614ff16d8d59fc9f4db3986b12f188b54a554ea99e959d"
+  },
+  {
+    "nome": "Tiago",
+    "email": "tbiel2010@gmail.com",
+    "tipo": "cliente",
+    "especialidade": null,
+    "senha_hash": "pbkdf2:sha256:1000000$7f5RwXbP4aa0YDa5$2d15b11fa065a4fe837d47e27a467dbdec4026af944f9c5e30bc18df6a025a66"
   }
 ]
